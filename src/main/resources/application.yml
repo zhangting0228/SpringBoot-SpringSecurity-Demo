@@ -1,0 +1,20 @@
+spring:
+    http:
+      encoding:
+        force: true
+    jackson:
+        time-zone: GMT+8
+        date-format: yyyy-MM-dd HH:mm:ss
+    profiles:
+        active: dev
+    cache:
+      type: ehcache
+      ehcache:
+        config: classpath:config/ehcache.xml
+    mvc:
+        favicon:
+          enabled: false
+server:
+  port: 8002
+  servlet:
+    context-path: /
