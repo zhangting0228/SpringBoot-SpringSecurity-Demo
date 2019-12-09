@@ -1,6 +1,5 @@
 package com.zhangting.controller;
 
-import com.zhangting.model.UserDO;
 import com.zhangting.util.ResponseMsg;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;

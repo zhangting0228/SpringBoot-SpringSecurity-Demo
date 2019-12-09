@@ -37,7 +37,7 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
                 .anyRequest().authenticated()
                 .and()
                 // 设置登陆页
-                .formLogin().loginPage("/login")
+                .formLogin().loginPage("/login.html").loginProcessingUrl("/authentication/form").failureUrl("/login.html")
                 // 设置登陆成功页
                 .defaultSuccessUrl("/index.html").permitAll()
                 .usernameParameter("username")
