@@ -8,10 +8,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @Description
  */
 @SpringBootApplication
-public class PlatformApplication
-{
-    public static void main(String[] args)
-    {
+public class PlatformApplication {
+    public static void main(String[] args) {
         SpringApplication.run(PlatformApplication.class, args);
+        System.out.println("================= 启动成功 =================");
     }
 }

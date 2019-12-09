@@ -17,14 +17,6 @@ public class SystemController {
     public String login() {
         return "login.html";
     }
-
-    @GetMapping("/")
-    public String showHome() {
-        String name = SecurityContextHolder.getContext().getAuthentication().getName();
-        System.out.println("登陆成功！当前登陆用户：" + name);
-        return "index.html";
-    }
-
     /**
      * 密码加盐
      * @param args
