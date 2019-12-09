@@ -43,7 +43,7 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
                 .usernameParameter("username")
                 .passwordParameter("password")
                 .and()
-                .logout().permitAll();
+                .logout().logoutSuccessUrl("/login.html").permitAll();
 
         // 关闭CSRF跨域
         http.csrf().disable();

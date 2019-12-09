@@ -6,8 +6,37 @@
     <script src="res/js/jquery-min.js"></script>
     <script src="res/js/ztoolUtil.js"></script>
     <script src="js/index.js"></script>
+    <style>
+        h1{
+            display: inline-block;
+        }
+        .logout{
+            display: block;
+            height: 30px;
+            background-color: #009966;
+            border: none;
+            border-radius: 3px;
+            text-decoration: none;
+            text-underline: none;
+            cursor: pointer;
+            line-height: 28px;
+            color: white;
+            width: 80px;
+            text-align: center;
+            float: right;
+            right: 10px;
+        }
+        .logout:hover{
+            opacity: 0.8;
+        }
+        .logout:active{
+            opacity: 1;
+        }
+
+    </style>
 </head>
 <body>
+<a href="/logout" class="logout">退出</a>
 <h1>欢迎登录：<span id="username"></span></h1>
 </body>
 </html>
