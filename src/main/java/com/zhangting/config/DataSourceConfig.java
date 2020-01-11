@@ -1,23 +1,34 @@
 package com.zhangting.config;
 
-
+import com.alibaba.druid.pool.DruidDataSource;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.mybatis.spring.SqlSessionFactoryBean;
 import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import tk.mybatis.spring.mapper.MapperScannerConfigurer;
 
 import javax.sql.DataSource;
 
-
 /**
  * @Author 张挺（zhangting@binfo-tech.com）
- * @Description Mybatis配置
+ * @Description 数据源配置 - mysql
  */
 @Configuration
-public class MyBatisConfig {
+public class DataSourceConfig {
+
+    public DataSourceConfig() {
+    }
+
+    @Bean({"mysqlDataSource"})
+    @ConfigurationProperties(
+            prefix = "spring.datasource.mysql"
+    )
+    public DataSource dataSource() {
+        return new DruidDataSource();
+    }
 
     @Bean({"dataSourceSqlSessionFactory"})
     public SqlSessionFactory dataSourceSqlSessionFactory(@Qualifier("mysqlDataSource") DataSource dataSource) throws Exception {
@@ -42,4 +53,3 @@ public class MyBatisConfig {
         return  new SqlSessionTemplate(sqlSessionFactory);
     }
 }
-

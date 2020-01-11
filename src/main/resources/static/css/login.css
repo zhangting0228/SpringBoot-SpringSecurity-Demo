@@ -1,21 +1,29 @@
+body {
+    height: 100vh;
+    background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+    overflow: hidden;
+    /*filter: drop-shadow(0 0 10px white);*/
+}
+
 .login-page {
-    padding: 8% 0 0;
+    padding: 5% 0 0;
     margin: 130px auto;
 }
 
 .form {
     position: relative;
     z-index: 1;
-    background: #FFFFFF;
+    /*background: #FFFFFF;*/
     max-width: 380px;
-    margin: 0 auto 100px;
+    margin: 0 auto;
     padding: 50px;
     text-align: center;
-    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+    /*box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);*/
 }
 
 .form input {
     font-family: "Roboto", sans-serif;
+    font-size: 20px;
     outline: 0;
     background: #f2f2f2;
     width: 100%;
@@ -30,7 +38,9 @@
     font-family: "Microsoft YaHei", "Roboto", sans-serif;
     text-transform: uppercase;
     outline: 0;
-    background: #009966;
+    /*background: #009966;*/
+    background: black;
+    font-weight: bold;
     width: 100%;
     border: 0;
     padding: 15px;
@@ -50,13 +60,13 @@
     opacity: 1;
 }
 
-body {
-    background: url(../res/img/background.jpg) no-repeat;
-    background-size: cover;
-    font-family: "Roboto", sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
+/*body {*/
+/*    background: url(../res/img/background.jpg) no-repeat;*/
+/*    background-size: cover;*/
+/*    font-family: "Roboto", sans-serif;*/
+/*    -webkit-font-smoothing: antialiased;*/
+/*    -moz-osx-font-smoothing: grayscale;*/
+/*}*/
 
 .shake_effect {
     -webkit-animation-name: shake;
@@ -98,8 +108,37 @@ body {
     font-family: "Microsoft YaHei", "Roboto", sans-serif;
     font-size: 30px;
     font-weight: bold;
+    color: #FFFFFF;
 }
 
 #username{
     margin-top: 20px;
+}
+
+input:-webkit-autofill {
+    -webkit-text-fill-color: black !important;
+    background-color: transparent !important;
+    background-image: none !important;
+    background: none !important;
+    border-image: url(../../res/images/input.png) 0 0 0 0 stretch !important;
+    -webkit-border-image: url(../../res/images/input.png) 0 0 0 0 stretch !important;
+    text-indent: 15px;
+    -webkit-box-shadow: 0 0 0px 1000px transparent inset !important;
+    transition: background-color 50000s ease-in-out 0s;
+}
+
+input:-internal-autofill-previewed,
+input:-internal-autofill-selected {
+    -webkit-text-fill-color: #807c7c;
+    transition: background-color 5000s ease-out 0.5s;
+}
+
+.footer {
+    position: absolute;
+    bottom: 5px;
+    text-align: center;
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    color: #ffffff;
 }

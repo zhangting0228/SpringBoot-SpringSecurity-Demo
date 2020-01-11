@@ -38,6 +38,7 @@ public class UserDO implements UserDetails {
     @JsonIgnore
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
+        // 在这里把用户的角色资源塞进authorities
         List<GrantedAuthority> authorities = new ArrayList<>();
 //        for (RoleDO role : roles) {
 //            authorities.add(new SimpleGrantedAuthority(role.getName()));
