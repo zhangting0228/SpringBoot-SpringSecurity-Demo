@@ -2,16 +2,15 @@ $(function () {
     $("#login").click(function () {
         check_login();
         return false;
-    })
+    });
 });
 
 function check_login() {
-    var username = $("#username").val();
-    var password = $("#password").val();
-    console.log(ztool.util.net.getURL());
+    let username = $("#username").val();
+    let password = $("#password").val();
     ztool.net.asyncAjaxData('post', '/login1', {
         username: username,
-        passeord: password
+        password: password
     }, function (res) {
         if (res.status){
             window.location = ztool.util.net.getURL() + "/index.html";

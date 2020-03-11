@@ -2,7 +2,6 @@ body {
     height: 100vh;
     background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
     overflow: hidden;
-    /*filter: drop-shadow(0 0 10px white);*/
 }
 
 .login-page {
@@ -13,17 +12,15 @@ body {
 .form {
     position: relative;
     z-index: 1;
-    /*background: #FFFFFF;*/
     max-width: 380px;
     margin: 0 auto;
     padding: 50px;
     text-align: center;
-    /*box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);*/
 }
 
 .form input {
     font-family: "Roboto", sans-serif;
-    font-size: 20px;
+    font-size: 14px;
     outline: 0;
     background: #f2f2f2;
     width: 100%;
@@ -31,7 +28,6 @@ body {
     margin: 0 0 20px;
     padding: 15px;
     box-sizing: border-box;
-    font-size: 14px;
 }
 
 .form button {
@@ -56,17 +52,8 @@ body {
 }
 
 .form button:active{
-    filter: alpha(100%);
     opacity: 1;
 }
-
-/*body {*/
-/*    background: url(../res/img/background.jpg) no-repeat;*/
-/*    background-size: cover;*/
-/*    font-family: "Roboto", sans-serif;*/
-/*    -webkit-font-smoothing: antialiased;*/
-/*    -moz-osx-font-smoothing: grayscale;*/
-/*}*/
 
 .shake_effect {
     -webkit-animation-name: shake;
